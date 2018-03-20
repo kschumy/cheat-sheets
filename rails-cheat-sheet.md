@@ -1,8 +1,22 @@
+## Random
+rails console
+
 # Active Record
 
 ## Migrations
 
 ### Steps for Migration
+Using the generator ensures that we are following Rails _conventions_ and really streamlines project set up. Let's run a generator command to a create a new model. Note: The name we specify, "book" is _singular_ (unlike the controller command).
+
+```bash
+$ rails generate model book title:string author:string
+```
+
+This command will do two things:
+
+- Create an empty Rails **model** in the `app/models/` directory called `book.rb`
+- Create a Rails **migration** in the `db/migrations/` directory called `<timestamp>_create_books.rb` that contains the fields specified in the command above
+
 1. Create a model  
 - `rails generate model  title:string author:string`
 2. Generate a migration
